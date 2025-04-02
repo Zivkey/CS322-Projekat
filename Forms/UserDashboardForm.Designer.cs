@@ -1,6 +1,6 @@
-﻿namespace CS322_Projekat
+﻿namespace CS322_Projekat.Forms
 {
-    partial class LoginForm
+    partial class UserDashboardForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "LoginForm";
+            btnLogout = new Button();
+            SuspendLayout();
+            // 
+            // btnLogout
+            // 
+            btnLogout.Location = new Point(680, 398);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(94, 29);
+            btnLogout.TabIndex = 1;
+            btnLogout.Text = "Logout";
+            btnLogout.UseVisualStyleBackColor = true;
+            btnLogout.Click += btnLogout_Click;
+            // 
+            // UserDashboardForm
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(btnLogout);
+            Name = "UserDashboardForm";
+            Text = "UserDashboard";
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Button btnLogout;
     }
 }
